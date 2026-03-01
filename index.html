@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>E-Voting Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="header">
+    <h1>Class Votng System</h1>
+    <h3>Online E-Voting System</h3>
+</div>
+
+<div class="login-box">
+    <h3>User Login</h3>
+
+    <label>Login As</label>
+    <select id="role">
+        <option value="student">Student</option>
+        <option value="teacher">Teacher (Admin)</option>
+    </select>
+
+    <label>User ID</label>
+    <input type="text" id="userid" placeholder="Enter ID">
+
+    <label>Password</label>
+    <input type="password" id="password" placeholder="Enter Password">
+
+    <button onclick="login()">Login</button>
+</div>
+
+<footer>
+    School/College Level - E-Voting System
+</footer>
+
+<script>
+function login() {
+    var role = document.getElementById("role").value;
+
+    if (role === "student") {
+        window.location.href = "student.html";
+    } 
+    else if (role === "teacher") {
+        window.location.href = "teacher.html";
+    }
+}
+</script>
+
+<!-- <script>
+function login() {
+    var role = document.getElementById("role").value;
+    var id = document.getElementById("userid").value;
+    var pass = document.getElementById("password").value;
+
+    // Demo passwords given by college
+    var studentPassword = "student123";
+    var teacherPassword = "teacher123";
+
+    if (role === "student") {
+        if (pass === studentPassword) {
+            window.location.href = "student.html";
+        } else {
+            alert("Invalid Student Password");
+        }
+    }
+
+    if (role === "teacher") {
+        if (pass === teacherPassword) {
+            window.location.href = "teacher.html";
+        } else {
+            alert("Invalid Teacher Password");
+        }
+    }
+}
+</script> -->
+
+
+</body>
+</html>
+

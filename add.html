@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Manage Voter List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="header">
+    <h2>Manage Voter List (Teacher / Admin)</h2>
+</div>
+
+<div class="vote-box">
+    <h3>Add Voter</h3>
+
+    <input type="text" id="voterId" placeholder="Student ID">
+    <input type="text" id="voterName" placeholder="Student Name">
+    <button onclick="addVoter()">Add Voter</button>
+
+    <hr>
+
+    <h3>Voter List</h3>
+
+     <table border="1" width="100%" id="voterTable"> 
+        <tr>
+            <th>Student ID</th>
+            <th>Name</th>
+            <th>Action</th>
+        </tr>
+    </table>
+</div>
+
+<!-- <script>
+function addVoter() {
+    var id = document.getElementById("voterId").value;
+    var name = document.getElementById("voterName").value;
+
+    if (id === "" || name === "") {
+        alert("Please enter Student ID and Name");
+        return;
+    }
+
+    var table = document.getElementById("voterTable");
+    var row = table.insertRow();
+
+    row.insertCell(0).innerHTML = id;
+    row.insertCell(1).innerHTML = name;
+    row.insertCell(2).innerHTML =
+        "<button onclick='removeVoter(this)'>Remove</button>";
+
+    document.getElementById("voterId").value = "";
+    document.getElementById("voterName").value = "";
+}
+
+function removeVoter(btn) {
+    var row = btn.parentNode.parentNode;
+    row.parentNode.removeChild(row);
+}
+</script> -->
+
+</body>
+</html>
